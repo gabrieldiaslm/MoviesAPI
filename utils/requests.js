@@ -51,3 +51,23 @@ export const getTvDetails = async (id) => {
   const data = await res.json();
   return data;
 };
+
+//
+export const getTvSearch = async (query) => {
+  const res = await fetch(
+    `${BASE_URL}/search/tv?api_key=${API_KEY}&query=${query}`
+  );
+  const data = await res.json();
+  return data.results;
+};
+
+//multi search 
+
+
+export const getMulti = async (query) => {
+  const res = await fetch(
+    `${BASE_URL}/search/tv?language=pt-BR&api_key=${API_KEY}&query=${query}`
+  );
+  const data = await res.json();
+  return data.results;
+};

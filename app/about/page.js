@@ -6,8 +6,8 @@ export default function AboutUs() {
       <h1>Participantes</h1>
       <h3>PROGRAMAÇÃO 3</h3>
       <h4>AVALIAÇÃO 2</h4>
-      <li>Gabriel</li>
-      <li>Hellen</li>
-      <li>Lorena</li>
+      <li>Gabriel Dias Lemos Martins</li>
+      <li>Hellen Jasmine Pessoa Ferreira</li>
+      <li>Lorena Bezerra Martins</li>
     </div>)
 }

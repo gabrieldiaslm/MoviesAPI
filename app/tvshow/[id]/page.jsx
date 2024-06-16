@@ -29,6 +29,15 @@ async function DetailsOfTvShows({params}) {
                 </svg>
             </div>
             <p className="text-white">{movieDetails.overview}</p>
+            <p>Temporadas: {movieDetails.number_of_seasons}</p>
+            <p>Número de Episódios: {movieDetails.number_of_episodes}</p>
+            <h3 className='text-white'>Ultimo Episódio Lançado:</h3>
+            <div >
+                <img className='rounded' src={IMAGE_BASE_URL + movieDetails.last_episode_to_air.still_path} alt="imgep" />
+            </div>
+            <div className="d-flex">
+                <h5 className="mx-1 p-1  me-2 text-warning">{movieDetails.last_episode_to_air.name}</h5>
+            </div>
             
         </div></div>
     </div>
