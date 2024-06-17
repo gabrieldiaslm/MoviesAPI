@@ -1,4 +1,4 @@
-import { getTrendingMovies } from '@/utils/requests'
+import { getTrendingMovies } from '../utils/requests'
 import styles from './page.module.css'
 import Card from './components/Card'
 import Link from 'next/link'

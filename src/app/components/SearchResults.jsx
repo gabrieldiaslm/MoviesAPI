@@ -1,6 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 import Card from './Card';
+import { getMovies } from "@/src/utils/requests";
 
 function SearchResults({searchtext, movies}) {
     const [filteredMovies, setFilteredMovies] = useState(movies)

@@ -1,4 +1,4 @@
-
+import axios from 'axios'
 
 const API_KEY = process.env.PUBLIC_API_KEY;
 const BASE_URL = process.env.PUBLIC_BASE_URL;
@@ -52,7 +52,7 @@ export const getTvDetails = async (id) => {
   return data;
 };
 
-//
+// não usei
 export const getTvSearch = async (query) => {
   const res = await fetch(
     `${BASE_URL}/search/tv?api_key=${API_KEY}&query=${query}`
@@ -61,13 +61,17 @@ export const getTvSearch = async (query) => {
   return data.results;
 };
 
-//multi search 
-
-
-export const getMulti = async (query) => {
-  const res = await fetch(
-    `${BASE_URL}/search/tv?language=pt-BR&api_key=${API_KEY}&query=${query}`
-  );
-  const data = await res.json();
-  return data.results;
+// pegar generos dos filmes
+export const getGenres = async () => {
+  try {
+    const res = await fetch(`${BASE_URL}/genre/movie/list?api_key=${API_KEY}`);
+    if (!res.ok) {
+      throw new Error("Network response was not ok");
+    }
+    const data = await res.json();
+    return data.genres;
+  } catch (error) {
+    console.error("Failed to fetch genres:", error);
+    return [];
+  }
 };

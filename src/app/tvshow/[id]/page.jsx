@@ -1,4 +1,4 @@
-import {getTvDetails} from "@/utils/requests"
+import { getTvDetails } from "@/src/utils/requests"
 
 async function DetailsOfTvShows({params}) {
     const IMAGE_BASE_URL = 'https://www.themoviedb.org/t/p/w220_and_h330_face'

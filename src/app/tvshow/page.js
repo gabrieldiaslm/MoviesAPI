@@ -1,4 +1,4 @@
-import { getTvShows } from "@/utils/requests";
+import { getTvShows } from "@/src/utils/requests";
 import Cardtv from "../components/CardTV";
 import Link from "next/link";
 import React from 'react'

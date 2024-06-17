@@ -1,4 +1,4 @@
-import { getMovieDetails } from "@/utils/requests"
+import { getMovieDetails } from "@/src/utils/requests"
 
 async function DetailsOfMovies({params}) {
     const IMAGE_BASE_URL = 'https://www.themoviedb.org/t/p/w220_and_h330_face'
