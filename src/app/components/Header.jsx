@@ -26,7 +26,9 @@ function Header() {
                 <Link href="/about" className="btn btn-success">Sobre Nós</Link>
                 <form className="d-flex" onSubmit={e => handleSubmit(e)} role="search">
                   <input onChange={e => setSearchText(e.target.value)} className="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search"/>
-                  <button className="btn btn-outline-light" type="submit">Buscar</button>
+                  <button className="btn btn-outline-light" type="submit">
+                    <span className="spinner-border d-none"></span>
+                    Buscar</button>
                 </form>
               </div>
             </nav>

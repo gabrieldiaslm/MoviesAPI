@@ -62,7 +62,7 @@ export const getTvSearch = async (query) => {
 // pegar generos dos filmes
 export const getGenres = async () => {
   try {
-    const res = await fetch(`${BASE_URL}/genre/movie/list?api_key=${API_KEY}`);
+    const res = await fetch(`${BASE_URL}/discover/movie?api_key=${API_KEY}`);
     if (!res.ok) {
       throw new Error("Network response was not ok");
     }
